@@ -5,20 +5,47 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <img src="https://images.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png" alt="logo">
-        <nav id="navbar">
-            <ul>
-                <li><a href="index.html">Google Search</a></li>
-                <li><a href="image.html">Google Image Search</a></li>
-                
-            </ul>
-        </nav>
+      <div class="header">
+<a href="index.html">Back to Search</a>
+</div>
 
-        <form action="https://www.google.com/advanced_search" target="_blank">
-            <input type="text" name="q">
-            <input type="submit" value="Google Advanced Search">
-        </form>
-        </div>
+
+<main style="padding:32px;">
+<h1 style="margin-top:6px;font-weight:400">Advanced Search</h1>
+
+
+<!-- Google advanced parameters: as_q, as_epq, as_oq, as_eq -->
+<form class="advanced-form" action="https://www.google.com/search" target="_blank" method="GET">
+<div>
+<label for="all">Find pages with… “all these words:”</label>
+<input id="all" name="as_q" type="text" placeholder="all these words">
+</div>
+
+
+<div>
+<label for="exact">Find pages with… “this exact word or phrase:”</label>
+<input id="exact" name="as_epq" type="text" placeholder="this exact phrase">
+</div>
+
+
+<div>
+<label for="any">Find pages with… “any of these words:”</label>
+<input id="any" name="as_oq" type="text" placeholder="any of these words">
+</div>
+
+
+<div>
+<label for="none">Find pages with… “none of these words:”</label>
+<input id="none" name="as_eq" type="text" placeholder="none of these words">
+</div>
+
+
+<div style="margin-top:10px;">
+<button class="btn primary" type="submit">Advanced Search</button>
+</div>
+</form>
+
+
+</main>
     </body>
 </html>

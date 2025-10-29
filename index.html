@@ -5,20 +5,37 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <img src="https://images.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png" alt="logo">
-        <nav id="navbar">
-            <ul>
-                
-                <li><a href="image.html">Google Image Search</a></li>
-                <li><a href="advanced.html">Google Advanced Search</a></li>
-            </ul>
-        </nav>
+        <div class="header">
+<a href="images.html">Images</a>
+<a href="advanced.html">Advanced Search</a>
+</div>
 
-        <form action="https://www.google.com/search" target="_blank">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
-        </div>
+
+<main class="container">
+<img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo">
+
+<form id="searchForm" class="search" action="https://www.google.com/search" target="_blank" tamethod="GET">
+<div class="search-box">
+<input class="search-input" name="q" type="text" placeholder="Search Google or type a URL" aria-label="Search">
+</div>
+
+
+<div class="buttons">
+<button class="btn" type="submit">Google Search</button>
+<button class="btn" type="submit" name="btnI" value="I'm Feeling Lucky">I'm Feeling Lucky</button>
+</div>
+</form>
+</main>
+
+
+<div class="footer"></div>
+
+
+<script>
+
+document.querySelector('.search-input').addEventListener('keydown', function(e){
+if(e.key === 'Enter') return; 
+});
+</script>
     </body>
 </html>
